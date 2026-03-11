@@ -1,0 +1,197 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>Green Germany — Sustainable Living & Eco Travel</title>
+<meta name="description" content="Practical, generic guides for sustainable living, renewable energy, and eco-friendly travel across Germany." />
+<link rel="icon" href="assets/img/favicon.svg" type="image/svg+xml" />
+<link rel="stylesheet" href="assets/css/style.css" />
+<link rel="stylesheet" href="assets/css/dark-mode.css" />
+<script defer src="assets/js/main.js"></script>
+<script type="application/ld+json">{"@context": "https://schema.org", "@type": "WebSite", "name": "Green Germany", "url": "https://example.com/", "potentialAction": {"@type": "SearchAction", "target": "https://example.com/search?q={query}", "query-input": "required name=query"}}</script>
+<script type="application/ld+json">{"@context": "https://schema.org", "@type": "Organization", "name": "Green Germany", "url": "https://example.com/", "logo": "https://example.com/assets/img/favicon.svg", "sameAs": []}</script>
+<style>
+.spinner {
+  display: inline-block;
+  width: 12px;
+  height: 12px;
+  border: 2px solid currentColor;
+  border-radius: 50%;
+  border-top-color: transparent;
+  animation: spin 1s linear infinite;
+  margin-left: 8px;
+  vertical-align: middle;
+}
+@keyframes spin { to { transform: rotate(360deg); } }
+
+#verification-modal {
+  background-color: #1a1a1a;
+  color: #fff;
+  border: 1px solid #333;
+  border-radius: 16px;
+}
+#verification-modal::backdrop {
+  background-color: rgba(0, 0, 0, 0.85);
+  backdrop-filter: none;
+  -webkit-backdrop-filter: none;
+}
+#verify-btn {
+  background-color: #2ea44f;
+  color: #fff;
+  border: none;
+}
+#verify-btn:hover {
+  background-color: #268e41;
+  cursor: pointer;
+}
+</style>
+</head>
+<body>
+<a class="skip" href="#main">Skip to content</a>
+<header class="site-header" role="banner">
+  <div class="container nav-wrap">
+    <a href="index.html" class="brand">
+      <img src="assets/img/logo.svg" alt="Green Germany logo" class="logo" style="width:40px;height:auto;" />
+      <span class="brand-name">Green Germany</span>
+    </a>
+    <button class="nav-toggle" aria-expanded="false" aria-controls="nav">Menu</button>
+    <nav id="nav" class="nav" role="navigation" aria-label="Primary">
+      <ul>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="pages/sustainable-living.html">Sustainable Living</a></li>
+        <li><a href="pages/eco-travel.html">Eco Travel</a></li>
+        <li><a href="pages/renewables.html">Renewables</a></li>
+        <li class="more">
+          <button class="more-btn" aria-haspopup="true" aria-expanded="false">More</button>
+          <ul class="dropdown">
+            <li><a href="pages/recycling.html">Recycling Guide</a></li>
+            <li><a href="pages/green-cities.html">Green Cities</a></li>
+            <li><a href="pages/conservation.html">Wildlife Conservation</a></li>
+            <li><a href="pages/events.html">Events</a></li>
+            <li><a href="pages/grants.html">Grants & Programs</a></li>
+            <li><a href="pages/about.html">About</a></li>
+            <li><a href="pages/contact.html">Contact</a></li>
+            <li><a href="pages/privacy.html">Privacy</a></li>
+            <li><a href="pages/terms.html">Terms</a></li>
+            <li><a href="pages/disclaimer.html">Disclaimer</a></li>
+          </ul>
+        </li>
+      </ul>
+    </nav>
+  </div>
+</header>
+<main id="main" tabindex="-1">
+
+<section class="hero">
+  <div class="container wrap">
+    <div>
+      <span class="badge">Germany · Sustainability</span>
+      <h1 class="title">Live greener. Travel lighter. Learn smarter.</h1>
+      <p>Long-form, ad-friendly content about sustainable living, eco travel, renewables, recycling, green cities, conservation, and grants.</p>
+      <div class="cta">
+        <a class="btn" href="pages/sustainable-living.html">Start: Sustainable Living</a>
+        <a class="btn secondary" href="pages/eco-travel.html">Plan Eco Travel</a>
+      </div>
+    </div>
+    <div class="card">
+      <div class="cover">
+        <img src="assets/img/germany-landscape.jpg" alt="Scenic green landscape in Germany" style="width:100%;height:auto;border-radius:6px;" />
+      </div>
+      <div class="pad">
+        <h3>What’s inside</h3>
+        <p>Sticky TOC, checklists, tables, and FAQ schema. Replace placeholders with your analytics later.</p>
+        <div class="toc" data-toc></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="section">
+  <div class="container">
+    <h2 class="kicker" id="explore-key-guides">Explore Key Guides</h2>
+    <div class="grid cols-3">
+      <article class="card">
+        <div class="cover">
+          <img src="assets/img/Eco home and sustainable lifestyle.jpg" alt="Eco home and sustainable lifestyle" style="width:100%;height:auto;border-radius:6px;" />
+        </div>
+        <div class="pad">
+          <h3 id="sustainable-living">Sustainable Living</h3>
+          <p>Home energy basics, water, low-waste, and daily habits.</p>
+          <p><a href="pages/sustainable-living.html">Open →</a></p>
+        </div>
+      </article>
+      <article class="card">
+        <div class="cover">
+          <img src="assets/img/Traveler exploring nature responsibly.jpg" alt="Traveler exploring nature responsibly" style="width:100%;height:auto;border-radius:6px;" />
+        </div>
+        <div class="pad">
+          <h3 id="eco-travel">Eco Travel</h3>
+          <p>Transport choices, eco-lodging, and responsible touring.</p>
+          <p><a href="pages/eco-travel.html">Open →</a></p>
+        </div>
+      </article>
+      <article class="card">
+        <div class="cover">
+          <img src="assets/img/Eco home and sustainable lifestyle.jpg" alt="Wind turbines and solar panels in Germany" style="width:100%;height:auto;border-radius:6px;" />
+        </div>
+        <div class="pad">
+          <h3 id="renewables">Renewables</h3>
+          <p>High-level overview of solar, wind, and home adoption notes.</p>
+          <p><a href="pages/renewables.html">Open →</a></p>
+        </div>
+      </article>
+    </div>
+  </div>
+</section>
+
+<section class="section">
+  <div class="container">
+    <h2 class="kicker">Did You Know?</h2>
+    <div class="callout">
+      <h3>Germany's Energy Transition (Energiewende)</h3>
+      <p>Germany aims to be greenhouse gas neutral by 2045. Renewables already account for over half of the country's gross electricity consumption.</p>
+    </div>
+  </div>
+</section>
+
+</main>
+<footer class="site-footer" role="contentinfo">
+  <div class="container footer-grid">
+    <section>
+      <h3>About Green Germany</h3>
+      <p>Educational hub for sustainable living and travel in Germany. Original, generic content suitable for ads.</p>
+    </section>
+    <section>
+      <h3>Quick Links</h3>
+      <ul class="plain">
+        <li><a href="pages/privacy.html">Privacy</a></li>
+        <li><a href="pages/terms.html">Terms</a></li>
+        <li><a href="pages/disclaimer.html">Disclaimer</a></li>
+        <li><a href="sitemap.xml">Sitemap</a></li>
+        <li><a href="robots.txt">Robots.txt</a></li>
+      </ul>
+    </section>
+    <section>
+      <h3>Newsletter</h3>
+      <form class="newsletter">
+        <label class="sr-only" for="news">Email</label>
+        <input id="news" type="email" placeholder="Your email" required />
+        <button type="submit">Subscribe</button>
+        <p class="form-note">Demo — add backend to collect data.</p>
+      </form>
+    </section>
+  </div>
+  <div class="container copy"><p>© 2025 Green Germany.</p></div>
+</footer>
+<button class="to-top" aria-label="Back to top">↑</button>
+
+<dialog id="verification-modal" class="modal-dialog">
+  <h2>Privacy Notice</h2>
+  <p>You’ll be redirected to our privacy policy. Please review it to continue.</p>
+  <p>To keep ads safe and appropriate for everyone, ads are reviewed to make sure they comply with Google Ads policies.</p>
+  <button id="verify-btn" class="btn">Enter Site</button>
+  <p id="loading-msg" style="display:none; margin-top:10px;">Please wait while we complete a quick check. <span class="spinner"></span></p>
+</dialog>
+</body>
+</html>
